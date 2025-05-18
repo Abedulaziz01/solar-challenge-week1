@@ -1,4 +1,3 @@
-
 # Python
 __pycache__/
 *.py[cod]
@@ -8,7 +7,6 @@ __pycache__/
 Data
 *.csv
 .ipynb_checkpoints/
-
 
 # IDE
 .vscode/
