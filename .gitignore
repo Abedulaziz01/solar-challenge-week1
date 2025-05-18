@@ -5,9 +5,10 @@ __pycache__/
 .venv/
 
 # Data
-data/
+Data
 *.csv
 .ipynb_checkpoints/
+
 
 # IDE
 .vscode/
