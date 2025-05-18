@@ -10,3 +10,5 @@ Data
 .ipynb_checkpoints/
 
 
+# IDE
+.vscode/
