@@ -1,11 +1,14 @@
+
 # Python
 __pycache__/
 *.py[cod]
 .venv/
 
 # Data
+Data
 *.csv
 .ipynb_checkpoints/
+
 
 # IDE
 .vscode/
