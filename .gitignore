@@ -5,7 +5,9 @@ __pycache__/
 .venv/
 
 # Data
-Data
+
+Data/
+data/
 *.csv
 .ipynb_checkpoints/
 
