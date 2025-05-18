@@ -5,6 +5,6 @@ __pycache__/
 
 # Data
 data/
-Data
+
 *.csv
 .ipynb_checkpoints/
