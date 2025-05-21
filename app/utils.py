@@ -2,9 +2,9 @@ import pandas as pd
 
 def load_data(country):
     file_map = {
-        "Benin": "data/benin_cleaned.csv",
-        "Sierra Leone": "data/sierraleone_cleaned.csv",
-        "Togo": "data/togo_cleaned.csv"
+        "Benin": "../benin_cleaned.csv",
+        "Sierra Leone": "../sierraleone_cleaned.csv",
+        "Togo": "../togo_cleaned.csv"
     }
     return pd.read_csv(file_map[country])
 
