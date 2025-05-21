@@ -3,7 +3,7 @@ import os
 
 def load_data():
     # Use current working directory + data
-    data_folder = os.path.join(os.getcwd(), 'data')
+    data_folder = os.path.join(os.getcwd(), 'Data')
 
     # Check if path exists
     if not os.path.exists(data_folder):
