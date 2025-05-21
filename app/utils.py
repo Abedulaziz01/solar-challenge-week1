@@ -1,21 +1,22 @@
-import pandas as pd
 import os
+import pandas as pd
 
 def load_data():
-    # Use current working directory + data
-    data_folder = os.path.join(os.getcwd(), 'data')  # lowercase 'data'
+    # Get path relative to this file (utils.py)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    # Assuming Data folder is at the project root level, one directory above 'app'
+    project_root = os.path.abspath(os.path.join(base_dir, '..'))
+    data_folder = os.path.join(project_root, 'Data')
 
+    print("Looking for data folder at:", data_folder)
 
-    # Check if path exists
     if not os.path.exists(data_folder):
         raise FileNotFoundError(f"Data folder not found: {data_folder}")
 
-    # Load each country's file
     csv_files = {
         'TOgo': 'togo_cleaned.csv',
         'Benin': 'benin_cleaned.csv',
         'Sierra Leone': 'sierraleone_cleaned.csv',
-   
     }
 
     data_dict = {}
