@@ -2,26 +2,33 @@ import pandas as pd
 import os
 
 def load_data():
-    # Define the path to your data folder
-    data_folder = os.path.join(os.path.dirname(__file__), '..', 'data')
+    # Use current working directory + data
+    data_folder = os.path.join(os.getcwd(), 'data')
 
-    # List CSVs and create a dictionary
+    # Check if path exists
+    if not os.path.exists(data_folder):
+        raise FileNotFoundError(f"Data folder not found: {data_folder}")
+
+    # Load each country's file
     csv_files = {
-        'benin': 'benin_cleaned.csv',
-        'togo': 'togo_cleaned.csv',
-        'seraleon': 'sierraleone_cleaned.csv',
-       
+        'TOgo': 'togo_cleaned.csv',
+        'Benin': 'benin_cleaned.csv',
+        'Sierra Leone': 'sierraleone_cleaned.csv',
+   
     }
 
     data_dict = {}
 
     for country, file in csv_files.items():
         file_path = os.path.join(data_folder, file)
+
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"CSV file not found: {file_path}")
+
         df = pd.read_csv(file_path)
         df['Country'] = country
         data_dict[country] = df
 
-    # Combine all countries' data
     combined_df = pd.concat(data_dict.values(), ignore_index=True)
 
     return combined_df, data_dict
