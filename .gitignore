@@ -4,10 +4,6 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# Data
-Data
-*.csv
-.ipynb_checkpoints/
 
 
 # IDE
